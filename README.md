@@ -1,6 +1,6 @@
 # CMSC684wsn
 
-## hw3 
+## HW3 
 
 HW3 is an example. There are 27 nodes in the WSN, transmitting and receiving messages. It uses TOSSIM to do the simulations.
 
