@@ -42,5 +42,8 @@ Use this commond to burn the code into mote:
 make iris install,1 mib520,/dev/ttyUSB0
 ```
 
-Reference: I did this part following this guide: http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-mote_radio_communication.
+> "1" is the id I assigned to the mote. "mib250" is the programming broad (MIB250CB) I used to house iris mote XM2110 CB.
+
+
+*Reference: I did this part following this guide: http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-mote_radio_communication.*
 
