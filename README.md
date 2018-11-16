@@ -26,7 +26,7 @@ Use this commond to compile:
 ```
 make iris
 ```
-Connect your iris mote broad to computer, check whether it is connected correctly, using this commond 
+Connect your programming board to computer, check whether it is connected correctly, using this commond 
 ```
 ls -l /dev/ttyUSB*
 ```
@@ -42,7 +42,7 @@ Use this commond to burn the code into mote:
 make iris install,1 mib520,/dev/ttyUSB0
 ```
 
-> "1" is the id I assigned to the mote. "mib250" is the programming broad (MIB250CB) I used to house iris mote XM2110 CB.
+> "1" is the id I assigned to the mote. "mib250" is the programming board (MIB250CB) I used to house iris mote XM2110 CB.
 
 
 *Reference: I did this part following this guide: http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-mote_radio_communication.*
