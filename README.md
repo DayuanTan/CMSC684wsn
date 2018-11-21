@@ -62,7 +62,7 @@ make iris install,1 mib520,/dev/ttyUSB0
 
 ## Transceive_RSSI
 
-This is a upgrade based on ***BlinkToRadio***, which implements transmitting and receiving messages between motes. The added function is: 
+This is a upgrade based on ***BlinkToRadio***, which implements transmitting and receiving messages between motes. The added function in ***Transceive_RSSI*** is: 
   1. After recerving a message packet, get the RSSI value of it; 
   2. And then set Led's second light bright. (There are three lights on iris mote XM2110 CB).
   
