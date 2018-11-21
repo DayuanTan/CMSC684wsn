@@ -18,7 +18,7 @@ Then this commond to run the simulation:
 
 ## BlinkToRadio
 
-It implements the function to transmit and receive a simple message between motes. 
+It implements the function to transmit and receive simple-structure messages between motes. 
 
 There are only two elements in the message, node_id and the number value of that node's counter.
 
@@ -38,7 +38,7 @@ Use this commond to compile:
 ```
 make iris
 ```
-Connect your programming board to computer, check whether it is connected correctly, using this commond 
+Connect your programming board to computer. To check whether it is connected correctly, use this commond 
 ```
 ls -l /dev/ttyUSB*
 ```
@@ -54,7 +54,7 @@ Use this commond to burn the code into mote:
 make iris install,1 mib520,/dev/ttyUSB0
 ```
 
-> "1" is the id I assigned to the mote. "mib250" is the programming board (MIB250CB) I used to house iris mote XM2110 CB.
+> "1" is the id I assigned to the mote. "mib520" is the programming board (MIB250CB) I used to house iris mote XM2110 CB.
 
 
 *Reference: I did this part following this guide: http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-mote_radio_communication.*
@@ -76,6 +76,6 @@ This is a upgrade based on ***BlinkToRadio***, which implements transmitting and
 
   *Most important sentence is this one: "Look at the RF230ActiveMessageC component, and there you will see the PacketRSSI interface."*
   
-*3. Interfacehttps://github.com/tinyos/tinyos-main/blob/master/tos/lib/rfxlink/util/PacketField.nc*
+*3. Interfacehttps: https://github.com/tinyos/tinyos-main/blob/master/tos/lib/rfxlink/util/PacketField.nc*
 
 *4. Even I don't think it's useful, but maybe useful for you. An example for get RSSI in CC1000. http://tinyos.stanford.edu/tinyos-wiki/index.php/Rssi_Demo*
