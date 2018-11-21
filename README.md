@@ -2,7 +2,7 @@
 
 ## HW3 
 
-HW3 is an example. There are 27 nodes in the WSN, transmitting and receiving messages. It uses TOSSIM to do the simulations.
+HW3 is an example. There are 27 nodes in the WSN, transmitting and receiving messages. A topology is implemented. It uses TOSSIM to do the simulations.
 
 Use this commond to compile:
 ```
