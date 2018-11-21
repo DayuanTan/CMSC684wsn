@@ -66,7 +66,7 @@ This is a upgrade based on ***BlinkToRadio***, which implements transmitting and
   1. After recerving a message packet, get the RSSI value of it; 
   2. And then set Led's second light bright. (There are three lights on iris mote XM2110 CB).
   
-> FYI, `call Leds.set(1);` brights the lowest digit light, `call Leds.set(2);` brights the lowest but one digit light.
+> FYI, "`call Leds.set(1);`" brights the lowest digit light, "`call Leds.set(2);`" brights the lowest but one digit light.
 
 *Reference:*
 
