@@ -79,3 +79,13 @@ This is a upgrade based on ***BlinkToRadio***, which implements transmitting and
 *3. Interfacehttps: https://github.com/tinyos/tinyos-main/blob/master/tos/lib/rfxlink/util/PacketField.nc*
 
 *4. Even I don't think it's useful, but maybe useful for you. An example for get RSSI in CC1000. http://tinyos.stanford.edu/tinyos-wiki/index.php/Rssi_Demo*
+
+## RSSI_dist database v0.1
+
+Based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, change `Leds.set()` to `Leds.led0Toggle()` to test and collect the relationship between RSSI value (range form uint 0 to 255) and distance, we got following value pairs:
+
+|Distance|RSSI value|
+|:-:|:-:|
+|5cm|20|
+|15cm|16|
+|10m|8|
