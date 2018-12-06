@@ -1,6 +1,6 @@
 # CMSC684wsn
 
-*The environment I used is a **Fedora Virtual Machine** which has a TinyOS in it. (BTW, I changed to an Ubuntu VM which has a TinyOS on it since this Fedora has some JAVA env problems. )*
+*The environment I used is a `**Fedora Virtual Machine**` which has a TinyOS in it. (BTW, I changed to an `Ubuntu VM` which has a TinyOS on it since this Fedora has some JAVA env problems. )*
 
 *If you want to get a copy of that VMs form me, plz leave a message by creating an issue.*
 
@@ -98,11 +98,11 @@ Based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, ch
 
 ## RSSI_motes2PC
 
-*From now on, I moved to a **Ubuntu virtual machine** which has TinyOS 2.1.2, since the Fedora VM I used has some JAVA env problems and I think it may take me long time to fix it.*  
+*From now on, I moved to a `**Ubuntu virtual machine**` which has TinyOS 2.1.2, since the Fedora VM I used has some JAVA env problems and I think it may take me long time to fix it.*  
 
 This part is trying to communicate between motes and PC through USB wires. 
 
-Go to *~/tinyos-2_1_2/apps/tests/TestSerial* and install the sample application *TestSerial* on mote, which is used to communication through serial port. Then use the corresponding JAVA application that communication with it over the serial port, which is also located in the same directory and has already been compiled. 
+Go to `*~/tinyos-2_1_2/apps/tests/TestSerial*` and install the sample application `*TestSerial*` on mote, which is used to communication through serial port. Then use the *corresponding JAVA application* that communication with it over the serial port, which is also located in the same directory and has already been compiled. 
 
 Use these commands:
 
@@ -125,7 +125,7 @@ java TestSerial -comm serial@/dev/ttyUSB0:iris //Used to run the JAVA app
 and commu with mote through serial port.
 ```
 
-Note: Different mote and board may have different serial port and speed. For iris mote and mib520 board they should be */dev/ttyUSB1* and *iris (or 57600)*. 
+Note: Different mote and board may have different serial port and speed. For iris mote and mib520 board they should be `*/dev/ttyUSB1*` and `*iris (or 57600)*`. 
 
 *Reference:*
 
