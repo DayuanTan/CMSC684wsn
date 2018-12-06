@@ -102,29 +102,7 @@ Based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, ch
 
 This part is trying to communicate between motes and PC through USB wires. 
 
-Go to *~/tinyos-2_1_2/apps/tests/TestSerial* and install the sample application *TestSerial* on mote, which is used to communication through serial port. Then use the corresponding JAVA application that communication with it over the serial port, which is also located in the same directory and has already been compiled. 
-
-Use these commands:
-
-```
-ls -l /dev/ttyUSB*
-```
-The result should be 
-```
-/dev/ttyUSB0    //MIB520 has two ports, this one is used to burn code to iris mote.
-/dev/ttyUSB1    //This one is used for serial communication wiht the program running on the iris mote.
-```
-```
-make iris
-```
-```
-make iris install,1 mib520,/dev/ttyUSB0  //Used to burn the code into mote
-```
-```
-java TestSerial -comm serial@/dev/ttyUSB0:iris //Used to run the JAVA app and commu with mote through serial port.
-```
-
-Note: Different mote and board may have different serial port and speed. For iris mote and mib520 board they should be /dev/ttyUSB1 and iris (or 57600). 
+Good luck for me.
 
 *Reference:*
 
