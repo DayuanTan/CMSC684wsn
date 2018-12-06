@@ -121,7 +121,7 @@ make iris
 make iris install,1 mib520,/dev/ttyUSB0  //Used to burn the code into mote
 ```
 ```
-java TestSerial -comm serial@/dev/ttyUSB0:iris //Used to run the JAVA app 
+java TestSerial -comm serial@/dev/ttyUSB1:iris //Used to run the JAVA app 
                                                  and commu with mote through serial port.
 ```
 
@@ -131,6 +131,15 @@ Note: Different mote and board may have different serial port and speed. For iri
 
 *http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-PC_serial_communication_and_SerialForwarder_(TOS_2.1.1_and_later)*
 
+## BaseStation
+
+Mote 1 with program **Transceive_RSSI**, mote 2 with program **BaseStation** and also connected to PC through USB. Mote 2 receives the packet form mote 1 and send it to serial port/PC. 
+
+Use this command to print the received packet on PC:
+```
+java net.tinyos.tools.Listen -comm serial@/dev/ttyUSB1:iris
+```
+The result is printed using hex. The meaning of it refers to reference link, which is as the same as **TestSerial**'s.
 
 ## RSSI_motes2PC
 
