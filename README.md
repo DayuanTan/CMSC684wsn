@@ -96,7 +96,7 @@ Based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, ch
 |10m|8|
 
 
-## RSSI_motes2PC
+## TestSerial: Communication between mote and PC through serial port
 
 *From now on, I moved to a **`Ubuntu virtual machine`** which has TinyOS 2.1.2, since the Fedora VM I used has some JAVA env problems and I think it may take me long time to fix it.*  
 
@@ -130,3 +130,7 @@ Note: Different mote and board may have different serial port and speed. For iri
 *Reference:*
 
 *http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-PC_serial_communication_and_SerialForwarder_(TOS_2.1.1_and_later)*
+
+
+## RSSI_motes2PC
+
