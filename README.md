@@ -121,10 +121,11 @@ make iris
 make iris install,1 mib520,/dev/ttyUSB0  //Used to burn the code into mote
 ```
 ```
-java TestSerial -comm serial@/dev/ttyUSB0:iris //Used to run the JAVA app and commu with mote through serial port.
+java TestSerial -comm serial@/dev/ttyUSB0:iris //Used to run the JAVA app 
+and commu with mote through serial port.
 ```
 
-Note: Different mote and board may have different serial port and speed. For iris mote and mib520 board they should be /dev/ttyUSB1 and iris (or 57600). 
+Note: Different mote and board may have different serial port and speed. For iris mote and mib520 board they should be */dev/ttyUSB1* and *iris (or 57600)*. 
 
 *Reference:*
 
