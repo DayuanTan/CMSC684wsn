@@ -1,6 +1,11 @@
 # CMSC684wsn
 
+*The environment I used is a **Fedora Virtual Machine** which has a TinyOS in it. (BTW, I changed to an Ubuntu VM which has a TinyOS on it since this Fedora has some JAVA env problems. )*
+
+*If you want to get a copy of that VMs form me, plz leave a message by creating an issue.*
+
 ## HW3 
+
 
 HW3 is an example. There are 27 nodes in the WSN, transmitting and receiving messages. A topology is implemented. It uses TOSSIM to do the simulations.
 
@@ -89,3 +94,16 @@ Based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, ch
 |5cm|20|
 |15cm|16|
 |10m|8|
+
+
+## RSSI_motes2PC
+
+*From now on, I moved to a **Ubuntu virtual machine** which has TinyOS 2.1.2, since the Fedora VM I used has some JAVA env problems and I think it may take me long time to fix it.*  
+
+This part is trying to communicate between motes and PC through USB wires. 
+
+Good luck for me.
+
+*Reference:*
+
+*http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-PC_serial_communication_and_SerialForwarder_(TOS_2.1.1_and_later)*
