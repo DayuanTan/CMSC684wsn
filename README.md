@@ -1,6 +1,6 @@
 # CMSC684wsn
 
-*The environment I used is a **`Fedora Virtual Machine`** which has a TinyOS in it. (BTW, I changed to an `Ubuntu VM` which has a TinyOS on it since this Fedora has some JAVA env problems. )*
+*The environment I used is a **`Fedora Virtual Machine`** which has a TinyOS in it. (BTW, I changed to an **`Ubuntu VM`** which has a TinyOS on it since this Fedora has some JAVA env problems. )*
 
 *If you want to get a copy of that VMs form me, plz leave a message by creating an issue.*
 
