@@ -143,7 +143,7 @@ The result is printed using hex. The meaning of it refers to reference link, whi
 
 ## RSSI_motes2PC
 
-*Reference*
+*Reference:*
 
 *http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-PC_serial_communication_and_SerialForwarder_(TOS_2.1.1_and_later)*
 
