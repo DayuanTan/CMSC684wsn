@@ -45,30 +45,13 @@ implementation {
   event void Timer0.fired() {
     if (!busy){
       
-
-   
-     
-      /*
-	if ( (uint8_t)(&btrpkt->rssi_to_nodeid) == (uint8_t)(1) ){  //As unknown node which needs to be located, TOS_NODE_ID should be 1, forwarding rssi value it received to sink node.
-	  call Leds.led1Toggle();	  
-	  //btrpkt->nodeid = TOS_NODE_ID;
-	  //btrpkt->rssi_form_nodeid = (uint16_t)(&source);
-	  //btrpkt->rssi_to_nodeid = 1;
-	  //btrpkt->rssi = rssi_value;
-	  
-	  if (call RadioSend.send(AM_BROADCAST_ADDR, &pkt, sizeof(RSSIMsg)) == SUCCESS){ //forward to sink node.
-	    busy = TRUE;
-	    call Leds.led2Toggle();
-	  }
-	}
-*/
+    //May need send packet to PC.
     }
   }
  
 
 
   event message_t* RadioReceive.receive(message_t* msg, void* payload, uint8_t len){
-    //RSSIMsg* btrpkt = (RSSIMsg*)(call RadioPacket.getPayload(&pkt, sizeof(RSSIMsg)));
     btrpkt = (RSSIMsg*)payload;
     if (btrpkt->rssi_from_nodeid == (uint16_t)3 ){
       call Leds.led0Toggle();
