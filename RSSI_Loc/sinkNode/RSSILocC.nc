@@ -53,7 +53,7 @@ implementation {
 
   event message_t* RadioReceive.receive(message_t* msg, void* payload, uint8_t len){
     btrpkt = (RSSIMsg*)payload;
-    if (btrpkt->rssi_from_nodeid == (uint16_t)3 ){
+    if (btrpkt->rssi_from_nodeid == (uint16_t)2 || btrpkt->rssi_from_nodeid == (uint16_t)3 || btrpkt->rssi_from_nodeid == (uint16_t)4 || btrpkt->rssi_from_nodeid == (uint16_t)5){ 
       call Leds.led0Toggle();
     }
     if (btrpkt->rssi_to_nodeid == (uint16_t)1 ){
