@@ -178,7 +178,7 @@ make iris intall,1 mib520,/dev/ttyUSB0  // for node 1, as unknown node.
 
 Check rssi_from_nodeid==2, 3, 4 or 5, rssi_to_nodeid==1, rssi>0.
 ```
-make iris intall,0 mib520,/dev/ttyUSB0  // for node , as sink node.
+make iris intall,0 mib520,/dev/ttyUSB0  // for node 0, as sink node.
 ```
 
 *Reference:*
