@@ -155,19 +155,31 @@ typedef nx_struct RSSIMsg{
 }RSSIMsg;
 ```
 
-Assume Beacon node (or sending node) id is 3, Unknown node (or forwarding node) id is 1, sink node id is 0.
+Assume Beacon node (or sending node) id is 2, 3, 4 or 5, Unknown node (or forwarding node) id is 1, sink node id is 0.
 
 ***sendingNodes***: Work as **Beacon Nodes**. Send packets to Unknown Node, or forwarding node. 
 
-Set nodeid=3 (itself), rssi_from_nodeid=3, rssi_to_nodeid=1, rssi=-1.
+Set nodeid=2, 3, 4 or 5 (itself), rssi_from_nodeid=2, 3, 4 or 5, rssi_to_nodeid=1, rssi=-1.
+
+```
+make iris intall,2 mib520,/dev/ttyUSB0  // for node 2
+make iris intall,3 mib520,/dev/ttyUSB0  // for node 3
+make iris intall,4 mib520,/dev/ttyUSB0  // for node 4
+```
 
 ***forwardingNodes***: Work as **Unknown Node**, forwaridng pakcets received form Beacon nodes to sink node.
 
 Check rssi_to_nodeid==1, rssi>0. Set nodeid=1 (itself).
+```
+make iris intall,1 mib520,/dev/ttyUSB0  // for node 1, as unknown node.
+```
 
 ***sinkNode***:Work as **sink node**. Receive packets forwarded by Unknown Node, originally form Beacon Nodes. Send it to PC.
 
-Check rssi_from_nodeid==3, rssi_to_nodeid==1, rssi>0.
+Check rssi_from_nodeid==2, 3, 4 or 5, rssi_to_nodeid==1, rssi>0.
+```
+make iris intall,0 mib520,/dev/ttyUSB0  // for node , as sink node.
+```
 
 *Reference:*
 
