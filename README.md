@@ -176,7 +176,7 @@ make iris intall,1 mib520,/dev/ttyUSB0  // for node 1, as unknown node.
 
 ***sinkNode***:Work as **sink node**. Receive packets forwarded by Unknown Node, originally form Beacon Nodes. Send it to PC.
 
-Check rssi_from_nodeid==2, 3, 4 or 5, rssi_to_nodeid==1, rssi>0.
+Check nodeid==1(forwarding node), rssi_from_nodeid==2, 3, 4 or 5, rssi_to_nodeid==1, rssi>0.
 ```
 make iris intall,0 mib520,/dev/ttyUSB0  // for node 0, as sink node.
 ```
