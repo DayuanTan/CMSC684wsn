@@ -1,11 +1,11 @@
 <tos_image>
   <ident>
-    <uidhash>A70A6658L</uidhash>
+    <uidhash>E5161CE4L</uidhash>
     <hostname>Ubuntu-TinyOS</hostname>
     <username>u3f</username>
     <appname>RSSILocAppC</appname>
     <userhash>08C189EDL</userhash>
-    <timestamp>5C1190FBL</timestamp>
+    <timestamp>5C119E5CL</timestamp>
     <deluge_support>no</deluge_support>
     <platform>iris</platform>
   </ident>

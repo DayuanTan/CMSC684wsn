@@ -1,6 +1,6 @@
 <nesc xmlns="http://www.tinyos.net/nesC">
   <wiring>
-    <wire loc="20:RSSILocAppC.nc">
+    <wire loc="19:RSSILocAppC.nc">
       <from><interface-ref name="Boot" scoped="" ref="0x4041ba20"/></from>
       <to><interface-ref name="Boot" scoped="" ref="0x404225f0"/></to>
     </wire>
@@ -8,7 +8,7 @@
       <from><interface-ref name="Boot" scoped="" ref="0x404225f0"/></from>
       <to><interface-ref name="Boot" scoped="" ref="0x40424a28"/></to>
     </wire>
-    <wire loc="21:RSSILocAppC.nc">
+    <wire loc="20:RSSILocAppC.nc">
       <from><interface-ref name="Leds" scoped="" ref="0x4041bd88"/></from>
       <to><interface-ref name="Leds" scoped="" ref="0x40520010"/></to>
     </wire>
@@ -16,7 +16,7 @@
       <from><interface-ref name="Leds" scoped="" ref="0x40520010"/></from>
       <to><interface-ref name="Leds" scoped="" ref="0x40526698"/></to>
     </wire>
-    <wire loc="22:RSSILocAppC.nc">
+    <wire loc="21:RSSILocAppC.nc">
       <from><interface-ref name="Timer0" scoped="" ref="0x4054c4b8"/></from>
       <to><interface-ref name="Timer" scoped="" ref="0x40547330"/></to>
     </wire>
@@ -30,7 +30,7 @@
       </arguments>
       </to>
     </wire>
-    <wire loc="23:RSSILocAppC.nc">
+    <wire loc="22:RSSILocAppC.nc">
       <from><interface-ref name="RadioPacket" scoped="" ref="0x405753c8"/></from>
       <to><interface-ref name="Packet" scoped="" ref="0x40c9b010"/></to>
     </wire>
@@ -38,7 +38,7 @@
       <from><interface-ref name="Packet" scoped="" ref="0x40c9b010"/></from>
       <to><interface-ref name="Packet" scoped="" ref="0x4100a310"/></to>
     </wire>
-    <wire loc="24:RSSILocAppC.nc">
+    <wire loc="23:RSSILocAppC.nc">
       <from><interface-ref name="RadioAMPacket" scoped="" ref="0x4057c470"/></from>
       <to><interface-ref name="AMPacket" scoped="" ref="0x40c9b6a8"/></to>
     </wire>
@@ -46,7 +46,7 @@
       <from><interface-ref name="AMPacket" scoped="" ref="0x40c9b6a8"/></from>
       <to><interface-ref name="AMPacket" scoped="" ref="0x4100a9a8"/></to>
     </wire>
-    <wire loc="25:RSSILocAppC.nc">
+    <wire loc="24:RSSILocAppC.nc">
       <from><interface-ref name="RadioSend" scoped="" ref="0x40581410"/></from>
       <to><interface-ref name="AMSend" scoped="" ref="0x40c44938"/></to>
     </wire>
@@ -54,7 +54,7 @@
       <from><interface-ref name="AMSend" scoped="" ref="0x40c44938"/></from>
       <to><interface-ref name="AMSend" scoped="" ref="0x4100dc58"/></to>
     </wire>
-    <wire loc="26:RSSILocAppC.nc">
+    <wire loc="25:RSSILocAppC.nc">
       <from><interface-ref name="RadioControl" scoped="" ref="0x4057fde0"/></from>
       <to><interface-ref name="SplitControl" scoped="" ref="0x40695e78"/></to>
     </wire>

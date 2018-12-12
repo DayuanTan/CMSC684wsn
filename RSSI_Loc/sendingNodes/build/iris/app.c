@@ -3208,7 +3208,7 @@ static inline void RSSILocC__RadioControl__stopDone(error_t err);
 
 
 static inline void RSSILocC__Timer0__fired(void );
-#line 63
+#line 62
 static inline void RSSILocC__RadioSend__sendDone(message_t *msg, error_t err);
 # 89 "/home/u3f/tinyos-2_1_2/tos/chips/atm1281/timer/HplAtm128TimerCtrl8.nc"
 static uint8_t /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm1281AlarmAsyncP*/Atm1281AlarmAsyncP__0__TimerCtrl__getInterruptFlag(void );
@@ -6663,9 +6663,9 @@ inline static bool RealMainP__Scheduler__runNextTask(void ){
 #line 65
 }
 #line 65
-# 63 "RSSILocC.nc"
+# 62 "RSSILocC.nc"
 static inline void RSSILocC__RadioSend__sendDone(message_t *msg, error_t err)
-#line 63
+#line 62
 {
   if (&RSSILocC__pkt == msg) {
       RSSILocC__busy = FALSE;
@@ -12988,7 +12988,6 @@ static inline void RSSILocC__Timer0__fired(void )
       if (__nesc_ntoh_uint16(btrpkt->rssi.nxdata) == (int16_t )-1) {
           RSSILocC__Leds__led2Toggle();
         }
-
 
       if (RSSILocC__RadioSend__send(AM_BROADCAST_ADDR, &RSSILocC__pkt, sizeof(RSSIMsg )) == SUCCESS) {
           RSSILocC__busy = TRUE;
