@@ -87,7 +87,7 @@ This is a upgrade based on ***BlinkToRadio***, which implements transmitting and
 
 ## RSSI_dist database v0.1
 
-Based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, change `Leds.set()` to `Leds.led0Toggle()` to test and collect the relationship between RSSI value (range form uint 0 to 255) and distance, we got following value pairs:
+***RSSI_dbv0.1***, based on the code of <a href="README.md#Transceive_RSSI">Transceive_RSSI</a>, change `Leds.set()` to `Leds.led0Toggle()` to test and collect the relationship between RSSI value (range form uint 0 to 255) and distance, we got following value pairs:
 
 |Distance|RSSI value|
 |:-:|:-:|
@@ -141,7 +141,33 @@ java net.tinyos.tools.Listen -comm serial@/dev/ttyUSB1:iris
 ```
 The result is printed using hex. The meaning of it refers to reference link, which is as the same as **TestSerial**'s.
 
-## RSSI_motes2PC
+## RSSI_Loc
+
+Try to implement RSSI localizatin algorithm.
+
+Define the message struct in `RSSILoc.h`:
+```
+typedef nx_struct RSSIMsg{
+  nx_uint16_t nodeid;
+  nx_uint16_t rssi_from_nodeid;
+  nx_uint16_t rssi_to_nodeid;
+  nx_uint16_t rssi;
+}RSSIMsg;
+```
+
+Assume Beacon node (or sending node) id is 3, Unknown node (or forwarding node) id is 1, sink node id is 0.
+
+***sendingNodes***: Work as **Beacon Nodes**. Send packets to Unknown Node, or forwarding node. 
+
+Set nodeid=3 (itself), rssi_from_nodeid=3, rssi_to_nodeid=1, rssi=-1.
+
+***forwardingNodes***: Work as **Unknown Node**, forwaridng pakcets received form Beacon nodes to sink node.
+
+Check rssi_to_nodeid==1, rssi>0. Set nodeid=1 (itself).
+
+***sinkNode***:Work as **sink node**. Receive packets forwarded by Unknown Node, originally form Beacon Nodes. Send it to PC.
+
+Check rssi_from_nodeid==3, rssi_to_nodeid==1, rssi>0.
 
 *Reference:*
 
