@@ -20,6 +20,8 @@ implementation {
   bool busy = FALSE;
   message_t pkt;
   RSSIMsg* btrpkt;
+  uint16_t rssi_from_nodeid = 0;
+  uint16_t rssi_to_nodeid = 0;
   uint16_t rssi_value = 0;
   
   am_addr_t dest ;
@@ -46,12 +48,23 @@ implementation {
     if (!busy){
       
       btrpkt->nodeid = (uint16_t)TOS_NODE_ID;
-
-      if (call RadioSend.send(AM_BROADCAST_ADDR, &pkt, sizeof(RSSIMsg)) == SUCCESS){ //forward to sink node.
-	busy = TRUE;
-	call Leds.led0Toggle();
-      }
+      if (rssi_to_nodeid == (uint16_t)1 ){
+	btrpkt->rssi_to_nodeid = rssi_to_nodeid;
 	
+	if ( rssi_from_nodeid == (uint16_t)2 || rssi_from_nodeid == (uint16_t)3 || rssi_from_nodeid == (uint16_t)4 || rssi_from_nodeid == (uint16_t)5 ){
+	  btrpkt->rssi_from_nodeid = rssi_from_nodeid;
+	  
+	  if (rssi_value > 0){
+	    btrpkt->rssi = rssi_value;
+	  
+
+	    if (call RadioSend.send(AM_BROADCAST_ADDR, &pkt, sizeof(RSSIMsg)) == SUCCESS){ //forward to sink node.
+	      busy = TRUE;
+	      call Leds.led0Toggle();
+	    }
+	  }
+	}
+      }
 
     }
   }
@@ -62,15 +75,20 @@ implementation {
     btrpkt = (RSSIMsg*)payload;
 
     if (btrpkt->rssi_to_nodeid == (uint16_t)1 ){//As unknown node which needs to be located, TOS_NODE_ID should be 1, forwarding rssi value it received to sink node.
-      call Leds.led1Toggle();
+      rssi_to_nodeid = 1;
+    
+      if ( btrpkt->rssi_from_nodeid == (uint16_t)2 || btrpkt->rssi_from_nodeid == (uint16_t)3 || btrpkt->rssi_from_nodeid == (uint16_t)4 || btrpkt->rssi_from_nodeid == (uint16_t)5 ){ 
+	rssi_from_nodeid = btrpkt->rssi_from_nodeid;
+	call Leds.led1Toggle();
+	
+	rssi_value = call PacketRSSI.get(msg);
+	if (rssi_value > 0){
+	  call Leds.led2Toggle();
+	}
+      }
     }
     
-    rssi_value = call PacketRSSI.get(msg);
-    if (rssi_value > 0){
-      call Leds.led2Toggle();
-    }
 
-      
     return msg;
   }
 

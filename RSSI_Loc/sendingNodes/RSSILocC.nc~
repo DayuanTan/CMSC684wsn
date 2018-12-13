@@ -41,16 +41,15 @@ implementation {
       btrpkt->nodeid = (uint16_t)TOS_NODE_ID;
       btrpkt->rssi_from_nodeid = (uint16_t)TOS_NODE_ID;
       btrpkt->rssi_to_nodeid = (uint16_t)1; //1 as unknown node which needs to be located.
-      btrpkt->rssi = (int16_t)(-1);
+      btrpkt->rssi = (uint16_t)(0);
       
       if (btrpkt->rssi_to_nodeid == (uint16_t)1){
 	call Leds.led1Toggle();
       }
-      if (btrpkt->rssi == (int16_t)(-1) ){
+      if (btrpkt->rssi == (uint16_t)(0) ){
 	call Leds.led2Toggle();
       }
-      //call RadioAMPacket.setDestination(&pkt, 1);
-      //call RadioAMPacket.setSource(&pkt, TOS_NODE_ID);
+
       if (call RadioSend.send(AM_BROADCAST_ADDR, &pkt, sizeof(RSSIMsg)) == SUCCESS){
         busy = TRUE;
 	call Leds.led0Toggle();

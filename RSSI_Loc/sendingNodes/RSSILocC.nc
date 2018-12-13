@@ -41,12 +41,12 @@ implementation {
       btrpkt->nodeid = (uint16_t)TOS_NODE_ID;
       btrpkt->rssi_from_nodeid = (uint16_t)TOS_NODE_ID;
       btrpkt->rssi_to_nodeid = (uint16_t)1; //1 as unknown node which needs to be located.
-      btrpkt->rssi = (int16_t)(-1);
+      btrpkt->rssi = (uint16_t)(0);
       
       if (btrpkt->rssi_to_nodeid == (uint16_t)1){
 	call Leds.led1Toggle();
       }
-      if (btrpkt->rssi == (int16_t)(-1) ){
+      if (btrpkt->rssi == (uint16_t)(0) ){
 	call Leds.led2Toggle();
       }
 
