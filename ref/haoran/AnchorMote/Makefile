@@ -1,0 +1,7 @@
+COMPONENT=AnchorMoteAppC
+
+INCLUDES= -I..
+
+CFLAGS += $(INCLUDES)
+
+include $(MAKERULES)

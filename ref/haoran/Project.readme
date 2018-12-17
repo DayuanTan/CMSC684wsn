@@ -1,0 +1,32 @@
+/*
+ * Project.readme
+ * Dayuan Tan & Haoran Ren
+ * CMSC 684 Project - RSSI Localization
+ *
+ * This file describs how to execute the project.
+ * 
+ */
+ 
+ 1. In the AnchorMote folder, use the command below to program four motes as the anchor motes.
+ 
+ Clearly lable them as mote 2 to mote 5 by changing (mote#) to its lable.
+ 
+ make iris install,(mote#) mib520,/dev/ttyUSB0
+ 
+ 
+ 2. In the TargetMote folder, use the command below to program the target mote.
+ 
+ make iris install,(mote#) mib520,/dev/ttyUSB0
+ 
+ 3. Set the four anchor motes in a coordinate system, and change the coordinates of them in the constants block in /main/project.java.
+ 
+ Then, turn the anchor motes on.
+ 
+ 4. Connect the target mote to a computer, in /main folder, run make if code changed in step 3.
+ 
+ Then, run the flowing command to execute the project.
+ 
+ java Project -comm serial@/dev/ttyUSB1:iris
+ 
+ 
+ 

@@ -102,7 +102,7 @@ This is a upgrade based on ***BlinkToRadio***, which implements transmitting and
 
 This part is trying to communicate between motes and PC through USB wires. 
 
-Go to *`~/tinyos-2_1_2/apps/tests/TestSerial`* and install the sample application *`TestSerial`* on mote, which is used to communication through serial port. Then use the *corresponding JAVA application* that communication with it over the serial port, which is also located in the same directory and has already been compiled. 
+Go to *`~/tinyos-2_1_2/apps/tests/TestSerial`* and install the sample application *`TestSerial`* (in *ref* directory) on mote, which is used to communication through serial port. Then use the *corresponding JAVA application* that communication with it over the serial port, which is also located in the same directory and has already been compiled. 
 
 Use these commands:
 
@@ -133,7 +133,7 @@ Note: Different mote and board may have different serial port and speed. For iri
 
 ## BaseStation
 
-Mote 1 with program **Transceive_RSSI**, mote 2 with program **BaseStation** and also connected to PC through USB. Mote 2 receives the packet form mote 1 and send it to serial port/PC. 
+Mote 1 with program **Transceive_RSSI**, mote 2 with program **BaseStation** (in *ref* directory) and also connected to PC through USB. Mote 2 receives the packet form mote 1 and send it to serial port/PC. 
 
 Use this command to print the received packet on PC:
 ```
