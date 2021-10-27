@@ -21,13 +21,18 @@ Then this commond to run the simulation:
 ./simulate.py > HW3Output.txt
 ```
 
-Requriement is [here]()
+Requriement is [here](report/Assignment_3_programming_2018.pdf)
 
-My report is [here]()
+My report is [here](report/hw3_DayuanTan.pdf)
 
 # Project: Localization for WSN nodes using RSSI
 
-My report is [here]()
+My report is [here](report/CMSC684_Report.pdf)
+
+Reference: [IRIS_motes_Datasheet](ref/link1_IRIS_motes_Datasheet.pdf), [Mote Processor Ratio and Mote Interface Boards User Manual](ref/fromnet_MoteProcessorNinterfaceUserManual.pdf)
+
+
+
 
 ## BlinkToRadio
 
